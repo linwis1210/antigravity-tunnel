@@ -1,1 +1,12 @@
-IyBTZWNyZXRzIOKAlCBuZXZlciBjb21taXQKLnB1YmxpYy1rZXkKLnR1bm5lbC1rZXkKLnByb3h5LWVudgoqLnBlbQoqLmtleQouZW52CgojIExvZ3MgYW5kIGNhY2hlcwoqLmxvZwpfX3B5Y2FjaGVfXy8KKi5weWMK
+# Secrets — never commit
+.public-key
+.tunnel-key
+.proxy-env
+*.pem
+*.key
+.env
+
+# Logs and caches
+*.log
+__pycache__/
+*.pyc

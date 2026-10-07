@@ -1,1 +1,165 @@
-Ly8gSGVybXVzZSBoYXJkZW5lZCB0dW5uZWwgd29ya2VyIChDbG91ZGZsYXJlIFdvcmtlcnMpLgovLyBTaW5nbGUtZmlsZSBwb3J0IG9mIHRoZSBQYWdlcyBGdW5jdGlvbnM6IF9fdHVubmVsL3BvbGwuanMsIF9fdHVubmVsL3Jlc3BvbmQuanMsCi8vIGFuZCB0aGUgaGFyZGVuZWQgW1twYXRoXV0uanMgaW5ncmVzcy4KLy8KLy8gQmluZGluZ3MgLyBzZWNyZXRzIChzZXQgdmlhIEFQSSwgbmV2ZXIgaW4gY29kZSk6Ci8vICAgZW52LkRCICAgICAgICAgIC0gRDEgZGF0YWJhc2UgKHR1bm5lbF9yZXF1ZXN0cyAvIHR1bm5lbF9yZXNwb25zZXMpCi8vICAgZW52LlRVTk5FTF9LRVkgIC0gdHVubmVsIGNsaWVudCA8LT4gd29ya2VyIGtleQovLyAgIGVudi5QVUJMSUNfS0VZICAtIHB1YmxpYyBjYWxsZXJzIGtleSwgaGVhZGVyIFgtVHVubmVsLUF1dGgKLy8gICBlbnYuQkFDS0VORF9LRVkgLSBBbnRpZ3Jhdml0eSBBUEkga2V5LCBpbmplY3RlZCBzZXJ2ZXItc2lkZQovLwovLyBSb3V0ZXM6Ci8vICAgUE9TVCAvX190dW5uZWwvcG9sbCAgICAgLSBsb2NhbCB0dW5uZWwgY2xpZW50IGxvbmctcG9sbHMgZm9yIHF1ZXVlZCByZXF1ZXN0cwovLyAgIFBPU1QgL19fdHVubmVsL3Jlc3BvbmQgIC0gbG9jYWwgdHVubmVsIGNsaWVudCBwb3N0cyBiYWNrZW5kIHJlc3BvbnNlcwovLyAgICogICAgICAgICAgICAgICAgICAgICAgIC0gaGFyZGVuZWQgcHVibGljIGluZ3Jlc3MgKGFsbG93bGlzdGVkIHBhdGhzIG9ubHkpCgpjb25zdCBQQVRIX0FMTE9XTElTVCA9IG5ldyBTZXQoWyIvdjEvbW9kZWxzIiwgIi92MS9jaGF0L2NvbXBsZXRpb25zIl0pOwpjb25zdCBNRVRIT0RfQUxMT1dMSVNUID0gbmV3IFNldChbIkdFVCIsICJQT1NUIl0pOwpjb25zdCBNQVhfQk9EWSA9IDIgKiAxMDI0ICogMTAyNDsKY29uc3QgUkFURV9MSU1JVF9QRVJfTUlOID0gMzA7CmNvbnN0IFdBSVRfTVMgPSAyNTAwMDsKY29uc3QgUE9MTF9XQUlUX01TID0gMjAwMDA7CgpleHBvcnQgZGVmYXVsdCB7CiAgYXN5bmMgZmV0Y2gocmVxdWVzdCwgZW52KSB7CiAgICBjb25zdCB1cmwgPSBuZXcgVVJMKHJlcXVlc3QudXJsKTsKICAgIGlmICh1cmwucGF0aG5hbWUgPT09ICIvX190dW5uZWwvcG9sbCIgJiYgcmVxdWVzdC5tZXRob2QgPT09ICJQT1NUIikgewogICAgICByZXR1cm4gaGFuZGxlUG9sbChyZXF1ZXN0LCBlbnYpOwogICAgfQogICAgaWYgKHVybC5wYXRobmFtZSA9PT0gIi9fX3R1bm5lbC9yZXNwb25kIiAmJiByZXF1ZXN0Lm1ldGhvZCA9PT0gIlBPU1QiKSB7CiAgICAgIHJldHVybiBoYW5kbGVSZXNwb25kKHJlcXVlc3QsIGVudik7CiAgICB9CiAgICByZXR1cm4gaGFuZGxlSW5ncmVzcyhyZXF1ZXN0LCBlbnYpOwogIH0sCn07CgovLyBMb2NhbCBjbGllbnQgbG9uZy1wb2xsOiBob2xkIHVwIHRvIH4yMHMgdW50aWwgYSByZXF1ZXN0IGlzIHF1ZXVlZC4KYXN5bmMgZnVuY3Rpb24gaGFuZGxlUG9sbChyZXF1ZXN0LCBlbnYpIHsKICBjb25zdCB7IGtleSwgbGltaXQgfSA9IGF3YWl0IHJlcXVlc3QuanNvbigpLmNhdGNoKCgpID0+ICh7fSkpOwogIGlmIChrZXkgIT09IGVudi5UVU5ORUxfS0VZKSByZXR1cm4gbmV3IFJlc3BvbnNlKCJmb3JiaWRkZW4iLCB7IHN0YXR1czogNDAzIH0pOwoKICBjb25zdCBub3cgPSBEYXRlLm5vdygpOwogIGF3YWl0IGVudi5EQi5iYXRjaChbCiAgICBlbnYuREIucHJlcGFyZSgiREVMRVRFIEZST00gdHVubmVsX3JlcXVlc3RzIFdIRVJFIGNyZWF0ZWRfYXQgPCA/IikuYmluZChub3cgLSAxMjAwMDApLAogICAgZW52LkRCLnByZXBhcmUoIkRFTEVURSBGUk9NIHR1bm5lbF9yZXNwb25zZXMgV0hFUkUgY3JlYXRlZF9hdCA8ID8iKS5iaW5kKG5vdyAtIDEyMDAwMCksCiAgXSk7CgogIGNvbnN0IG4gPSBNYXRoLm1pbihNYXRoLm1heChwYXJzZUludChsaW1pdCkgfHwgNCwgMSksIDgpOwogIGNvbnN0IGRlYWRsaW5lID0gRGF0ZS5ub3coKSArIFBPTExfV0FJVF9NUzsKICBmb3IgKDs7KSB7CiAgICBjb25zdCByb3dzID0gYXdhaXQgZW52LkRCLnByZXBhcmUoCiAgICAgICJTRUxFQ1QgaWQsIG1ldGhvZCwgcGF0aCwgaGVhZGVycywgYm9keSBGUk9NIHR1bm5lbF9yZXF1ZXN0cyBXSEVSRSBzdGF0dXM9J3BlbmRpbmcnIE9SREVSIEJZIGNyZWF0ZWRfYXQgQVNDIExJTUlUID8iCiAgICApLmJpbmQobikuYWxsKCk7CgogICAgaWYgKHJvd3MucmVzdWx0cy5sZW5ndGggPiAwKSB7CiAgICAgIGNvbnN0IGlkcyA9IHJvd3MucmVzdWx0cy5tYXAoKHIpID0+IHIuaWQpOwogICAgICBjb25zdCBwbGFjZWhvbGRlcnMgPSBpZHMubWFwKCgpID0+ICI/Iikuam9pbigiLCIpOwogICAgICBhd2FpdCBlbnYuREIucHJlcGFyZSgKICAgICAgICBgVVBEQVRFIHR1bm5lbF9yZXF1ZXN0cyBTRVQgc3RhdHVzPSdjbGFpbWVkJyBXSEVSRSBpZCBJTiAoJHtwbGFjZWhvbGRlcnN9KSBBTkQgc3RhdHVzPSdwZW5kaW5nJ2AKICAgICAgKS5iaW5kKC4uLmlkcykucnVuKCk7CiAgICAgIHJldHVybiBSZXNwb25zZS5qc29uKHsgcmVxdWVzdHM6IHJvd3MucmVzdWx0cyB9KTsKICAgIH0KICAgIGlmIChEYXRlLm5vdygpID49IGRlYWRsaW5lKSByZXR1cm4gUmVzcG9uc2UuanNvbih7IHJlcXVlc3RzOiBbXSB9KTsKICAgIGF3YWl0IG5ldyBQcm9taXNlKChyKSA9PiBzZXRUaW1lb3V0KHIsIDEwMDApKTsKICB9Cn0KCi8vIExvY2FsIGNsaWVudCBwb3N0cyBhIGJhY2tlbmQgcmVzcG9uc2UgZm9yIGEgcmVxdWVzdCBpZC4KYXN5bmMgZnVuY3Rpb24gaGFuZGxlUmVzcG9uZChyZXF1ZXN0LCBlbnYpIHsKICBjb25zdCB7IGtleSwgaWQsIHN0YXR1c19jb2RlLCBoZWFkZXJzLCBib2R5IH0gPSBhd2FpdCByZXF1ZXN0Lmpzb24oKS5jYXRjaCgoKSA9PiAoe30pKTsKICBpZiAoa2V5ICE9PSBlbnYuVFVOTkVMX0tFWSB8fCAhaWQpIHJldHVybiBuZXcgUmVzcG9uc2UoImZvcmJpZGRlbiIsIHsgc3RhdHVzOiA0MDMgfSk7CgogIGF3YWl0IGVudi5EQi5wcmVwYXJlKAogICAgIklOU0VSVCBPUiBSRVBMQUNFIElOVE8gdHVubmVsX3Jlc3BvbnNlcyAoaWQsIHN0YXR1c19jb2RlLCBoZWFkZXJzLCBib2R5LCBjcmVhdGVkX2F0KSBWQUxVRVMgKD8sPyw/LD8sPykiCiAgKS5iaW5kKGlkLCBzdGF0dXNfY29kZSB8IDAsIEpTT04uc3RyaW5naWZ5KGhlYWRlcnMgfHwge30pLCBib2R5IHx8IG51bGwsIERhdGUubm93KCkpLnJ1bigpOwoKICByZXR1cm4gUmVzcG9uc2UuanNvbih7IG9rOiB0cnVlIH0pOwp9CgovLyBIYXJkZW5lZCBwdWJsaWMgaW5ncmVzcy4KYXN5bmMgZnVuY3Rpb24gaGFuZGxlSW5ncmVzcyhyZXF1ZXN0LCBlbnYpIHsKICAvLyAxLiBwdWJsaWMga2V5IGF1dGg6IGFjY2VwdCBYLVR1bm5lbC1BdXRoIE9SIEF1dGhvcml6YXRpb246IEJlYXJlciA8UFVCTElDX0tFWT4KICAvLyAgICAodGhlIGxhdHRlciBsZXRzIHN0YW5kYXJkIE9wZW5BSSBjbGllbnRzIHVzZSBQVUJMSUNfS0VZIGFzIHRoZWlyIEFQSSBrZXk7CiAgLy8gICAgIGNhbGxlciBoZWFkZXJzIGFyZSBzdGlsbCBkcm9wcGVkIGJlbG93LCBiYWNrZW5kIGtleSBpbmplY3RlZCBzZXJ2ZXItc2lkZSkKICBjb25zdCBwdWIgPSByZXF1ZXN0LmhlYWRlcnMuZ2V0KCJ4LXR1bm5lbC1hdXRoIikgfHwgIiI7CiAgY29uc3QgYmVhcmVyID0gcmVxdWVzdC5oZWFkZXJzLmdldCgiYXV0aG9yaXphdGlvbiIpIHx8ICIiOwogIGNvbnN0IG9rQXV0aCA9IChwdWIgJiYgcHViID09PSBlbnYuUFVCTElDX0tFWSkgfHwKICAgICAgICAgICAgICAgICAoYmVhcmVyID09PSAiQmVhcmVyICIgKyBlbnYuUFVCTElDX0tFWSk7CiAgaWYgKCFva0F1dGgpIHsKICAgIHJldHVybiBuZXcgUmVzcG9uc2UoSlNPTi5zdHJpbmdpZnkoeyBlcnJvcjogInVuYXV0aG9yaXplZCIgfSksIHsgc3RhdHVzOiA0MDEgfSk7CiAgfQoKICAvLyAyLiByYXRlIGxpbWl0IChEMSBzbGlkaW5nIHdpbmRvdykKICBjb25zdCBub3cgPSBEYXRlLm5vdygpOwogIGNvbnN0IGNudCA9IGF3YWl0IGVudi5EQi5wcmVwYXJlKAogICAgIlNFTEVDVCBDT1VOVCgqKSBBUyBjIEZST00gdHVubmVsX3JlcXVlc3RzIFdIRVJFIGNyZWF0ZWRfYXQgPiA/IgogICkuYmluZChub3cgLSA2MDAwMCkuZmlyc3QoKTsKICBpZiAoKGNudD8uYyB8fCAwKSA+PSBSQVRFX0xJTUlUX1BFUl9NSU4pIHsKICAgIHJldHVybiBuZXcgUmVzcG9uc2UoSlNPTi5zdHJpbmdpZnkoeyBlcnJvcjogInJhdGVfbGltaXRlZCIgfSksIHsgc3RhdHVzOiA0MjkgfSk7CiAgfQoKICAvLyAzLiBtZXRob2QgKyBwYXRoIGFsbG93bGlzdHMKICBjb25zdCB1cmwgPSBuZXcgVVJMKHJlcXVlc3QudXJsKTsKICBpZiAoIU1FVEhPRF9BTExPV0xJU1QuaGFzKHJlcXVlc3QubWV0aG9kKSkgewogICAgcmV0dXJuIG5ldyBSZXNwb25zZShKU09OLnN0cmluZ2lmeSh7IGVycm9yOiAibWV0aG9kIG5vdCBhbGxvd2VkIiB9KSwgeyBzdGF0dXM6IDQwMyB9KTsKICB9CiAgaWYgKCFQQVRIX0FMTE9XTElTVC5oYXModXJsLnBhdGhuYW1lKSkgewogICAgcmV0dXJuIG5ldyBSZXNwb25zZShKU09OLnN0cmluZ2lmeSh7IGVycm9yOiAicGF0aCBub3QgYWxsb3dlZCIgfSksIHsgc3RhdHVzOiA0MDMgfSk7CiAgfQoKICAvLyA0LiBoZWFkZXIgYWxsb3dsaXN0OiBkcm9wIGV2ZXJ5dGhpbmcgZnJvbSBjYWxsZXIsIGluamVjdCBiYWNrZW5kIGtleSBzZXJ2ZXItc2lkZQogIGNvbnN0IGN0eXBlID0gcmVxdWVzdC5oZWFkZXJzLmdldCgiY29udGVudC10eXBlIikgfHwgImFwcGxpY2F0aW9uL2pzb24iOwogIGNvbnN0IGhlYWRlcnMgPSB7CiAgICAiY29udGVudC10eXBlIjogY3R5cGUsCiAgICAiYXV0aG9yaXphdGlvbiI6ICJCZWFyZXIgIiArIGVudi5CQUNLRU5EX0tFWSwKICB9OwoKICAvLyA1LiBib2R5IGNhcAogIGxldCBib2R5QjY0ID0gbnVsbDsKICBpZiAocmVxdWVzdC5ib2R5ICYmIHJlcXVlc3QubWV0aG9kICE9PSAiR0VUIiAmJiByZXF1ZXN0Lm1ldGhvZCAhPT0gIkhFQUQiKSB7CiAgICBjb25zdCBidWYgPSBhd2FpdCByZXF1ZXN0LmFycmF5QnVmZmVyKCk7CiAgICBpZiAoYnVmLmJ5dGVMZW5ndGggPiBNQVhfQk9EWSkgewogICAgICByZXR1cm4gbmV3IFJlc3BvbnNlKEpTT04uc3RyaW5naWZ5KHsgZXJyb3I6ICJib2R5IHRvbyBsYXJnZSIgfSksIHsgc3RhdHVzOiA0MTMgfSk7CiAgICB9CiAgICBpZiAoYnVmLmJ5dGVMZW5ndGggPiAwKSB7CiAgICAgIGNvbnN0IGJ5dGVzID0gbmV3IFVpbnQ4QXJyYXkoYnVmKTsKICAgICAgbGV0IGJpbiA9ICIiOwogICAgICBmb3IgKGxldCBpID0gMDsgaSA8IGJ5dGVzLmxlbmd0aDsgaSArPSAzMjc2OCkgewogICAgICAgIGJpbiArPSBTdHJpbmcuZnJvbUNoYXJDb2RlLmFwcGx5KG51bGwsIGJ5dGVzLnN1YmFycmF5KGksIGkgKyAzMjc2OCkpOwogICAgICB9CiAgICAgIGJvZHlCNjQgPSBidG9hKGJpbik7CiAgICB9CiAgfQoKICBjb25zdCBpZCA9IGNyeXB0by5yYW5kb21VVUlEKCk7CiAgYXdhaXQgZW52LkRCLnByZXBhcmUoCiAgICAiSU5TRVJUIElOVE8gdHVubmVsX3JlcXVlc3RzIChpZCwgbWV0aG9kLCBwYXRoLCBoZWFkZXJzLCBib2R5LCBzdGF0dXMsIGNyZWF0ZWRfYXQpIFZBTFVFUyAoPyw/LD8sPyw/LCdwZW5kaW5nJyw/KSIKICApLmJpbmQoaWQsIHJlcXVlc3QubWV0aG9kLCB1cmwucGF0aG5hbWUgKyB1cmwuc2VhcmNoLCBKU09OLnN0cmluZ2lmeShoZWFkZXJzKSwgYm9keUI2NCwgbm93KS5ydW4oKTsKCiAgLy8gNi4gd2FpdCBmb3IgdHVubmVsZWQgcmVzcG9uc2UKICBjb25zdCBkZWFkbGluZSA9IERhdGUubm93KCkgKyBXQUlUX01TOwogIHdoaWxlIChEYXRlLm5vdygpIDwgZGVhZGxpbmUpIHsKICAgIGNvbnN0IHJvdyA9IGF3YWl0IGVudi5EQi5wcmVwYXJlKAogICAgICAiU0VMRUNUIHN0YXR1c19jb2RlLCBoZWFkZXJzLCBib2R5IEZST00gdHVubmVsX3Jlc3BvbnNlcyBXSEVSRSBpZD0/IgogICAgKS5iaW5kKGlkKS5maXJzdCgpOwogICAgaWYgKHJvdykgewogICAgICBhd2FpdCBlbnYuREIuYmF0Y2goWwogICAgICAgIGVudi5EQi5wcmVwYXJlKCJERUxFVEUgRlJPTSB0dW5uZWxfcmVxdWVzdHMgV0hFUkUgaWQ9PyIpLmJpbmQoaWQpLAogICAgICAgIGVudi5EQi5wcmVwYXJlKCJERUxFVEUgRlJPTSB0dW5uZWxfcmVzcG9uc2VzIFdIRVJFIGlkPT8iKS5iaW5kKGlkKSwKICAgICAgXSk7CiAgICAgIGNvbnN0IHJlc0hlYWRlcnMgPSBuZXcgSGVhZGVycyhKU09OLnBhcnNlKHJvdy5oZWFkZXJzIHx8ICJ7fSIpKTsKICAgICAgbGV0IGJvZHkgPSBudWxsOwogICAgICBpZiAocm93LmJvZHkpIHsKICAgICAgICBjb25zdCBiaW4gPSBhdG9iKHJvdy5ib2R5KTsKICAgICAgICBjb25zdCBieXRlcyA9IG5ldyBVaW50OEFycmF5KGJpbi5sZW5ndGgpOwogICAgICAgIGZvciAobGV0IGkgPSAwOyBpIDwgYmluLmxlbmd0aDsgaSsrKSBieXRlc1tpXSA9IGJpbi5jaGFyQ29kZUF0KGkpOwogICAgICAgIGJvZHkgPSBieXRlcy5idWZmZXI7CiAgICAgIH0KICAgICAgcmV0dXJuIG5ldyBSZXNwb25zZShib2R5LCB7IHN0YXR1czogcm93LnN0YXR1c19jb2RlLCBoZWFkZXJzOiByZXNIZWFkZXJzIH0pOwogICAgfQogICAgYXdhaXQgbmV3IFByb21pc2UoKHIpID0+IHNldFRpbWVvdXQociwgNDAwKSk7CiAgfQoKICBhd2FpdCBlbnYuREIucHJlcGFyZSgiREVMRVRFIEZST00gdHVubmVsX3JlcXVlc3RzIFdIRVJFIGlkPT8iKS5iaW5kKGlkKS5ydW4oKTsKICByZXR1cm4gbmV3IFJlc3BvbnNlKEpTT04uc3RyaW5naWZ5KHsgZXJyb3I6ICJ0dW5uZWwgdGltZW91dCIgfSksIHsgc3RhdHVzOiA1MDQgfSk7Cn0K
+// Hermuse hardened tunnel worker (Cloudflare Workers).
+// Single-file port of the Pages Functions: __tunnel/poll.js, __tunnel/respond.js,
+// and the hardened [[path]].js ingress.
+//
+// Bindings / secrets (set via API, never in code):
+//   env.DB          - D1 database (tunnel_requests / tunnel_responses)
+//   env.TUNNEL_KEY  - tunnel client <-> worker key
+//   env.PUBLIC_KEY  - public callers key, header X-Tunnel-Auth
+//   env.BACKEND_KEY - Antigravity API key, injected server-side
+//
+// Routes:
+//   POST /__tunnel/poll     - local tunnel client long-polls for queued requests
+//   POST /__tunnel/respond  - local tunnel client posts backend responses
+//   *                       - hardened public ingress (allowlisted paths only)
+
+const PATH_ALLOWLIST = new Set(["/v1/models", "/v1/chat/completions"]);
+const METHOD_ALLOWLIST = new Set(["GET", "POST"]);
+const MAX_BODY = 2 * 1024 * 1024;
+const RATE_LIMIT_PER_MIN = 30;
+const WAIT_MS = 25000;
+const POLL_WAIT_MS = 20000;
+
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url);
+    if (url.pathname === "/__tunnel/poll" && request.method === "POST") {
+      return handlePoll(request, env);
+    }
+    if (url.pathname === "/__tunnel/respond" && request.method === "POST") {
+      return handleRespond(request, env);
+    }
+    return handleIngress(request, env);
+  },
+};
+
+// Local client long-poll: hold up to ~20s until a request is queued.
+async function handlePoll(request, env) {
+  const { key, limit } = await request.json().catch(() => ({}));
+  if (key !== env.TUNNEL_KEY) return new Response("forbidden", { status: 403 });
+
+  const now = Date.now();
+  await env.DB.batch([
+    env.DB.prepare("DELETE FROM tunnel_requests WHERE created_at < ?").bind(now - 120000),
+    env.DB.prepare("DELETE FROM tunnel_responses WHERE created_at < ?").bind(now - 120000),
+  ]);
+
+  const n = Math.min(Math.max(parseInt(limit) || 4, 1), 8);
+  const deadline = Date.now() + POLL_WAIT_MS;
+  for (;;) {
+    const rows = await env.DB.prepare(
+      "SELECT id, method, path, headers, body FROM tunnel_requests WHERE status='pending' ORDER BY created_at ASC LIMIT ?"
+    ).bind(n).all();
+
+    if (rows.results.length > 0) {
+      const ids = rows.results.map((r) => r.id);
+      const placeholders = ids.map(() => "?").join(",");
+      await env.DB.prepare(
+        `UPDATE tunnel_requests SET status='claimed' WHERE id IN (${placeholders}) AND status='pending'`
+      ).bind(...ids).run();
+      return Response.json({ requests: rows.results });
+    }
+    if (Date.now() >= deadline) return Response.json({ requests: [] });
+    await new Promise((r) => setTimeout(r, 1000));
+  }
+}
+
+// Local client posts a backend response for a request id.
+async function handleRespond(request, env) {
+  const { key, id, status_code, headers, body } = await request.json().catch(() => ({}));
+  if (key !== env.TUNNEL_KEY || !id) return new Response("forbidden", { status: 403 });
+
+  await env.DB.prepare(
+    "INSERT OR REPLACE INTO tunnel_responses (id, status_code, headers, body, created_at) VALUES (?,?,?,?,?)"
+  ).bind(id, status_code | 0, JSON.stringify(headers || {}), body || null, Date.now()).run();
+
+  return Response.json({ ok: true });
+}
+
+// Hardened public ingress.
+async function handleIngress(request, env) {
+  // 1. public key auth: accept X-Tunnel-Auth OR Authorization: Bearer <PUBLIC_KEY>
+  //    (the latter lets standard OpenAI clients use PUBLIC_KEY as their API key;
+  //     caller headers are still dropped below, backend key injected server-side)
+  const pub = request.headers.get("x-tunnel-auth") || "";
+  const bearer = request.headers.get("authorization") || "";
+  const okAuth = (pub && pub === env.PUBLIC_KEY) ||
+                 (bearer === "Bearer " + env.PUBLIC_KEY);
+  if (!okAuth) {
+    return new Response(JSON.stringify({ error: "unauthorized" }), { status: 401 });
+  }
+
+  // 2. rate limit (D1 sliding window)
+  const now = Date.now();
+  const cnt = await env.DB.prepare(
+    "SELECT COUNT(*) AS c FROM tunnel_requests WHERE created_at > ?"
+  ).bind(now - 60000).first();
+  if ((cnt?.c || 0) >= RATE_LIMIT_PER_MIN) {
+    return new Response(JSON.stringify({ error: "rate_limited" }), { status: 429 });
+  }
+
+  // 3. method + path allowlists
+  const url = new URL(request.url);
+  if (!METHOD_ALLOWLIST.has(request.method)) {
+    return new Response(JSON.stringify({ error: "method not allowed" }), { status: 403 });
+  }
+  if (!PATH_ALLOWLIST.has(url.pathname)) {
+    return new Response(JSON.stringify({ error: "path not allowed" }), { status: 403 });
+  }
+
+  // 4. header allowlist: drop everything from caller, inject backend key server-side
+  const ctype = request.headers.get("content-type") || "application/json";
+  const headers = {
+    "content-type": ctype,
+    "authorization": "Bearer " + env.BACKEND_KEY,
+  };
+
+  // 5. body cap
+  let bodyB64 = null;
+  if (request.body && request.method !== "GET" && request.method !== "HEAD") {
+    const buf = await request.arrayBuffer();
+    if (buf.byteLength > MAX_BODY) {
+      return new Response(JSON.stringify({ error: "body too large" }), { status: 413 });
+    }
+    if (buf.byteLength > 0) {
+      const bytes = new Uint8Array(buf);
+      let bin = "";
+      for (let i = 0; i < bytes.length; i += 32768) {
+        bin += String.fromCharCode.apply(null, bytes.subarray(i, i + 32768));
+      }
+      bodyB64 = btoa(bin);
+    }
+  }
+
+  const id = crypto.randomUUID();
+  await env.DB.prepare(
+    "INSERT INTO tunnel_requests (id, method, path, headers, body, status, created_at) VALUES (?,?,?,?,?,'pending',?)"
+  ).bind(id, request.method, url.pathname + url.search, JSON.stringify(headers), bodyB64, now).run();
+
+  // 6. wait for tunneled response
+  const deadline = Date.now() + WAIT_MS;
+  while (Date.now() < deadline) {
+    const row = await env.DB.prepare(
+      "SELECT status_code, headers, body FROM tunnel_responses WHERE id=?"
+    ).bind(id).first();
+    if (row) {
+      await env.DB.batch([
+        env.DB.prepare("DELETE FROM tunnel_requests WHERE id=?").bind(id),
+        env.DB.prepare("DELETE FROM tunnel_responses WHERE id=?").bind(id),
+      ]);
+      const resHeaders = new Headers(JSON.parse(row.headers || "{}"));
+      let body = null;
+      if (row.body) {
+        const bin = atob(row.body);
+        const bytes = new Uint8Array(bin.length);
+        for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+        body = bytes.buffer;
+      }
+      return new Response(body, { status: row.status_code, headers: resHeaders });
+    }
+    await new Promise((r) => setTimeout(r, 400));
+  }
+
+  await env.DB.prepare("DELETE FROM tunnel_requests WHERE id=?").bind(id).run();
+  return new Response(JSON.stringify({ error: "tunnel timeout" }), { status: 504 });
+}

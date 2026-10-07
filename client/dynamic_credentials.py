@@ -1,5 +1,11 @@
 """Helpers for Muse dynamic credential surrogates.
 
+OPTIONAL / environment-specific: this module only works inside the author's
+Muse cloud environment, where a local authd socket injects Secure-Vault-backed
+credentials. Everyone else should ignore it — the tunnel scripts use
+client/cf_auth.py, which authenticates with the plain CF_API_TOKEN env var
+and only falls back to this module when no token is set.
+
 Import this bundled helper from generated skill CLIs. It returns only
 ``hsurr:*`` surrogate values; Sentinel/authd replace those surrogates with
 real credentials on approved outbound requests.

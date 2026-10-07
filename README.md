@@ -1,1 +1,176 @@
-PHAgYWxpZ249ImNlbnRlciI+CiAgPGgxIGFsaWduPSJjZW50ZXIiPmFudGlncmF2aXR5LXR1bm5lbDwvaDE+CjwvcD4KCjxwIGFsaWduPSJjZW50ZXIiPgogIDxzdHJvbmc+8J+agCBQdWJsaWMgSFRUUFMgZ2F0ZXdheSBmb3IgYSBsb2NhbCBBbnRpZ3Jhdml0eS1NYW5hZ2VyIE9wZW5BSSBBUEk8L3N0cm9uZz48YnI+CiAgQ2xvdWRmbGFyZSBXb3JrZXJzICsgRDEgdHVubmVsIOKAlCBjYWxsIGEgbW9kZWwgYmFja2VuZCB3aXRoIG5vIHB1YmxpYyBpbmJvdW5kLCBmcm9tIHlvdXIgcGhvbmUuCjwvcD4KCjxwIGFsaWduPSJjZW50ZXIiPgogIDxhIGhyZWY9Ii4vUkVBRE1FLm1kIj5FbmdsaXNoPC9hPiB8IDxhIGhyZWY9Ii4vUkVBRE1FLnpoLUNOLm1kIj7nroDkvZPkuK3mloc8L2E+CjwvcD4KCjxwIGFsaWduPSJjZW50ZXIiPgogIDxhIGhyZWY9Imh0dHBzOi8vZ2l0aHViLmNvbS9saW53aXMxMjEwL2FudGlncmF2aXR5LXR1bm5lbC9ibG9iL21haW4vTElDRU5TRSI+CiAgICA8aW1nIHNyYz0iaHR0cHM6Ly9pbWcuc2hpZWxkcy5pby9naXRodWIvbGljZW5zZS9saW53aXMxMjEwL2FudGlncmF2aXR5LXR1bm5lbD9zdHlsZT1mbGF0LXNxdWFyZSIgYWx0PSJMaWNlbnNlIiAvPgogIDwvYT4KICA8YSBocmVmPSJodHRwczovL2dpdGh1Yi5jb20vbGlud2lzMTIxMC9hbnRpZ3Jhdml0eS10dW5uZWwvc3RhcmdhemVycyI+CiAgICA8aW1nIHNyYz0iaHR0cHM6Ly9pbWcuc2hpZWxkcy5pby9naXRodWIvc3RhcnMvbGlud2lzMTIxMC9hbnRpZ3Jhdml0eS10dW5uZWw/c3R5bGU9ZmxhdC1zcXVhcmUiIGFsdD0iU3RhcnMiIC8+CiAgPC9hPgo8L3A+Cgo8cCBhbGlnbj0iY2VudGVyIj4KICA8aW1nIHNyYz0iaHR0cHM6Ly9pbWcuc2hpZWxkcy5pby9iYWRnZS9DbG91ZGZsYXJlX1dvcmtlcnMtRjM4MDIwP3N0eWxlPWZvci10aGUtYmFkZ2UmbG9nbz1jbG91ZGZsYXJlJmxvZ29Db2xvcj13aGl0ZSIgYWx0PSJDbG91ZGZsYXJlIFdvcmtlcnMiIC8+CiAgPGltZyBzcmM9Imh0dHBzOi8vaW1nLnNoaWVsZHMuaW8vYmFkZ2UvQ2xvdWRmbGFyZV9EMS1GMzgwMjA/c3R5bGU9Zm9yLXRoZS1iYWRnZSZsb2dvPWNsb3VkZmxhcmUmbG9nb0NvbG9yPXdoaXRlIiBhbHQ9IkNsb3VkZmxhcmUgRDEiIC8+CiAgPGltZyBzcmM9Imh0dHBzOi8vaW1nLnNoaWVsZHMuaW8vYmFkZ2UvUHl0aG9uLTM3NzZBQj9zdHlsZT1mb3ItdGhlLWJhZGdlJmxvZ289cHl0aG9uJmxvZ29Db2xvcj13aGl0ZSIgYWx0PSJQeXRob24iIC8+CjwvcD4KCi0tLQoKIyMg8J+TliBUYWJsZSBvZiBDb250ZW50cwoKLSBb4pyoIFdoeSBhbnRpZ3Jhdml0eS10dW5uZWw/XSgjLXdoeS1hbnRpZ3Jhdml0eS10dW5uZWwpCi0gW/Cfjq8gRmVhdHVyZXNdKCMtZmVhdHVyZXMpCi0gW/Cfj5fvuI8gQXJjaGl0ZWN0dXJlXSgj77iPLWFyY2hpdGVjdHVyZSkKLSBb8J+agCBRdWljayBTdGFydF0oIy1xdWljay1zdGFydCkKLSBb8J+boO+4jyBUZWNoIFN0YWNrXSgj77iPLXRlY2gtc3RhY2spCi0gW+KdkyBGQVFdKCMtZmFxKQotIFvwn5mPIEFja25vd2xlZGdtZW50c10oIy1hY2tub3dsZWRnbWVudHMpCi0gW/CfpJ0gQ29udHJpYnV0aW5nXSgjLWNvbnRyaWJ1dGluZykKLSBb8J+ThCBMaWNlbnNlXSgjLWxpY2Vuc2UpCi0gW+KaoO+4jyBEaXNjbGFpbWVyXSgj77iPLWRpc2NsYWltZXIpCgotLS0KCiMjIOKcqCBXaHkgYW50aWdyYXZpdHktdHVubmVsPwoKQW50aWdyYXZpdHktTWFuYWdlciBleHBvc2VzIGEgZ3JlYXQgT3BlbkFJLWNvbXBhdGlibGUgQVBJIOKAlCBidXQgb25seSBvbgpgMTI3LjAuMC4xYC4gWW91ciBwaG9uZSwgeW91ciBtYWlubGFuZCBzZXJ2ZXIsIGFuZCBhbnkgcmVtb3RlIGNsaWVudCBjYW4ndApyZWFjaCBpdC4gVGhpcyBwcm9qZWN0IGJyaWRnZXMgdGhhdCBnYXAgd2l0aCBhIGhhcmRlbmVkIENsb3VkZmxhcmUgdHVubmVsOgpwdWJsaWMgSFRUUFMgaW4sIGxvY2FsIEFQSSBvdXQsIHdpdGggdGhlIHJlYWwgYmFja2VuZCBrZXkgbmV2ZXIgbGVhdmluZyB0aGUKc2VydmVyLgoKIyMg8J+OryBGZWF0dXJlcwoKLSDwn5SQICoqSGFyZGVuZWQgaW5ncmVzcyoqIOKAlCBrZXkgYXV0aCAoYFgtVHVubmVsLUF1dGhgIG9yIGBCZWFyZXIgUFVCTElDX0tFWWAsCiAgc28gc3RhbmRhcmQgT3BlbkFJIGNsaWVudHMganVzdCB3b3JrKSwgcGF0aC9tZXRob2QvaGVhZGVyIGFsbG93bGlzdHMKLSDwn5SRICoqQmFja2VuZCBrZXkgc3RheXMgc2VydmVyLXNpZGUqKiDigJQgY2FsbGVycyBuZXZlciBzZWUgdGhlIHJlYWwgQVBJIGtleQotIPCfmqYgKipSYXRlIGxpbWl0aW5nKiog4oCUIDMwIHJlcS9taW4gcGVyIGtleSwgMiBNaUIgYm9keSBjYXAKLSDwn5OhICoqRDEtYmFja2VkIHF1ZXVlKiog4oCUIG5vIHBlcnNpc3RlbnQgY29ubmVjdGlvbiBuZWVkZWQgYmV0d2VlbiBlZGdlIGFuZCBWTQotIPCfkI0gKipEZXBlbmRlbmN5LWxpZ2h0IGNsaWVudCoqIOKAlCBwdXJlLVB5dGhvbiwgc3RkbGliIG9ubHksIHN5c3RlbWQtbWFuYWdlZAoKIyMg8J+Pl++4jyBBcmNoaXRlY3R1cmUKCmBgYApwaG9uZSDilIDilIBIVFRQU+KUgOKUgD4gQ2xvdWRmbGFyZSBXb3JrZXIg4pSA4pSARDHilIDilIA+IHR1bm5lbF9kMV9jbGllbnQucHkg4pSA4pSAbG9jYWxob3N04pSA4pSAPiBBbnRpZ3Jhdml0eSA6ODA0NQogICAoWC1UdW5uZWwtQXV0aCBvciBCZWFyZXIgUFVCTElDX0tFWSkgICAocG9sbHMgRDEgdmlhIEFQSSkgICAgICAgICAgKHJlYWwgYmFja2VuZCBrZXkpCmBgYAoKLSAqKldvcmtlcioqIChgd29ya2VyL3dvcmtlci5qc2ApOiBwdWJsaWMgaW5ncmVzcyArIEQxIHF1ZXVlLiBWYWxpZGF0ZXMgYXV0aCwKICBhbGxvd2xpc3RzLCBkcm9wcyBjYWxsZXIgaGVhZGVycywgaW5qZWN0cyB0aGUgYmFja2VuZCBrZXkgc2VydmVyLXNpZGUsCiAgZW5xdWV1ZXMgdGhlIHJlcXVlc3QsIHdhaXRzIOKJpDI1IHMgZm9yIHRoZSB0dW5uZWxlZCByZXNwb25zZS4KLSAqKkNsaWVudCoqIChgY2xpZW50L3R1bm5lbF9kMV9jbGllbnQucHlgKTogc3lzdGVtZCBzZXJ2aWNlIG9uIHRoZSBWTS4gUG9sbHMKICBEMSB2aWEgdGhlIENsb3VkZmxhcmUgQVBJLCBmb3J3YXJkcyBxdWV1ZWQgcmVxdWVzdHMgdG8gbG9jYWwgQW50aWdyYXZpdHksCiAgd3JpdGVzIHJlc3BvbnNlcyBiYWNrIHRvIEQxLgotICoqRGVwbG95KiogKGBkZXBsb3kvZGVwbG95X3dvcmtlci5weWAsIGBkZXBsb3kvc2NoZW1hLnNxbGApOiBvbmUtc2hvdCBXb3JrZXIKICB1cGxvYWQgKHNjcmlwdCArIEQxIGJpbmRpbmcgKyBzZWNyZXRzICsgd29ya2Vycy5kZXYgcm91dGUpLgoKIyMg8J+agCBRdWljayBTdGFydAoKKipQcmVyZXF1aXNpdGVzKio6IENsb3VkZmxhcmUgYWNjb3VudCwgRDEgZGF0YWJhc2UsIHJ1bm5pbmcgQW50aWdyYXZpdHktTWFuYWdlcgpvbiBgaHR0cDovLzEyNy4wLjAuMTo4MDQ1YC4KCjEuIEFwcGx5IGBkZXBsb3kvc2NoZW1hLnNxbGAgdG8geW91ciBEMSBkYXRhYmFzZS4KMi4gQ3JlYXRlIGEgQ2xvdWRmbGFyZSBBUEkgdG9rZW4gKFdvcmtlcnMgU2NyaXB0cyBFZGl0ICsgRDEgRWRpdCkuCjMuIEdlbmVyYXRlIGBUVU5ORUxfS0VZYCBhbmQgYFBVQkxJQ19LRVlgOyBub3RlIHlvdXIgQW50aWdyYXZpdHkgYEJBQ0tFTkRfS0VZYC4KNC4gUnVuIGBkZXBsb3kvZGVwbG95X3dvcmtlci5weWAgKHJlYWRzIHNlY3JldHMgZnJvbSBsb2NhbCA2MDAgZmlsZXMg4oCUCiAgIG5ldmVyIGhhcmRjb2RlIHRoZW0pLgo1LiBPbiB0aGUgVk06IGBiYXNoIGNsaWVudC9yZWluc3RhbGwtc2VydmljZS5zaGAgKGluc3RhbGxzIHRoZSBzeXN0ZW1kIHVuaXQ7CiAgIHJlLXJ1biBhZnRlciBhbnkgVk0gcmVidWlsZCkuCjYuIE9uIHlvdXIgcGhvbmUgKENoZXJyeSBTdHVkaW8gLyBPcGVuQ29kZSAvIGFueSBPcGVuQUkgY2xpZW50KTogYmFzZSBVUkwKICAgYGh0dHBzOi8vPHdvcmtlcj4uPHN1YmRvbWFpbj4ud29ya2Vycy5kZXYvdjFgLCBBUEkga2V5ID0gYFBVQkxJQ19LRVlgLgoKIyMg8J+boO+4jyBUZWNoIFN0YWNrCgotICoqRWRnZSoqOiBDbG91ZGZsYXJlIFdvcmtlcnMgKEVTIG1vZHVsZSksIENsb3VkZmxhcmUgRDEgKFNRTGl0ZSkKLSAqKlZNIGNsaWVudCoqOiBQeXRob24gMyAoc3RkbGliIG9ubHkg4oCUIGB1cmxsaWJgLCBubyB0aGlyZC1wYXJ0eSBkZXBzKQotICoqRGVwbG95IHRvb2xpbmcqKjogUHl0aG9uICsgQ2xvdWRmbGFyZSBSRVNUIEFQSSAobm8gd3JhbmdsZXIgcmVxdWlyZWQpCi0gKipCYWNrZW5kKio6IEFudGlncmF2aXR5LU1hbmFnZXIgKE9wZW5BSS1jb21wYXRpYmxlIGAvdjEvKmApCgojIyDinZMgRkFRCgo8ZGV0YWlscz4KPHN1bW1hcnk+PGI+UTogUGhvbmUgZ2V0cyA0MDQgIk5vIFdvcmtlcnMgc2NyaXB0IHdhcyBmb3VuZCBmb3IgdGhpcyBob3N0Ij88L2I+PC9zdW1tYXJ5PgoKVGhlIHJhdyBDbG91ZGZsYXJlIEFQSSBkb2VzICoqbm90KiogZW5hYmxlIHRoZSBgd29ya2Vycy5kZXZgIHJvdXRlIG9uIHVwbG9hZAood3JhbmdsZXIgZG9lcyBpdCBmb3IgeW91KS4gRml4OgoKYGBgYmFzaApjdXJsIC1YIFBPU1QgImh0dHBzOi8vYXBpLmNsb3VkZmxhcmUuY29tL2NsaWVudC92NC9hY2NvdW50cy88aWQ+L3dvcmtlcnMvc2NyaXB0cy88bmFtZT4vc3ViZG9tYWluIiBcCiAgLUggIkF1dGhvcml6YXRpb246IEJlYXJlciA8dG9rZW4+IiAtSCAiQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9qc29uIiBcCiAgLS1kYXRhICd7ImVuYWJsZWQiOnRydWV9JwpgYGAKCmBkZXBsb3kvZGVwbG95X3dvcmtlci5weWAgYWxyZWFkeSBkb2VzIHRoaXMgb24gZXZlcnkgZGVwbG95Lgo8L2RldGFpbHM+Cgo8ZGV0YWlscz4KPHN1bW1hcnk+PGI+UTogQ2FuJ3QgcmVhY2ggd29ya2Vycy5kZXYgZnJvbSBtYWlubGFuZCBDaGluYT88L2I+PC9zdW1tYXJ5PgoKYCoud29ya2Vycy5kZXZgIGlzIFNOSS1ibG9ja2VkIGJ5IHRoZSBHRlcuIE9wdGlvbnM6IGJpbmQgYSBjdXN0b20gZG9tYWluIHRvCnRoZSBXb3JrZXIgKGRpZmZlcmVudCBTTkksIHVzdWFsbHkgcmVhY2hhYmxlKSwgb3IgcnVuIHRoZSBiYWNrZW5kIG9uIGFuCm92ZXJzZWFzIFZQUyBpbnN0ZWFkLgo8L2RldGFpbHM+Cgo8ZGV0YWlscz4KPHN1bW1hcnk+PGI+UTogU2VydmljZXMgZ29uZSBhZnRlciBhIFZNIHJlYnVpbGQ/PC9iPjwvc3VtbWFyeT4KClJlYnVpbGRzIHdpcGUgYC9ldGMvc3lzdGVtZC9zeXN0ZW1gIGJ1dCBrZWVwIGAvaG9tZWAuIFJlLXJ1bjoKYGJhc2ggfi9tdXNlLWFudGlncmF2aXR5LXRlc3QvcmVpbnN0YWxsLXNlcnZpY2Uuc2hgIChBbnRpZ3Jhdml0eSkgYW5kCmBiYXNoIH4vZXhwZXJpbWVudHMvaGVybXVzZS1hbnRpZ3Jhdml0eS1wb2MvcmVpbnN0YWxsLXNlcnZpY2Uuc2hgCih0dW5uZWwgY2xpZW50KS4KPC9kZXRhaWxzPgoKPGRldGFpbHM+CjxzdW1tYXJ5PjxiPlE6IGBzdHJlYW06dHJ1ZWAgZG9lc24ndCBzdHJlYW0/PC9iPjwvc3VtbWFyeT4KCkFyY2hpdGVjdHVyYWwgbGltaXQgb2YgdGhlIGxvbmctcG9sbCBkZXNpZ246IHRoZSBmdWxsIHJlc3BvbnNlIGlzIGdlbmVyYXRlZApmaXJzdCwgdGhlbiByZXR1cm5lZCBhcyBjb21wbGV0ZSBTU0UgdGV4dC4gTm8gdHJ1ZSBzdHJlYW1pbmcuCjwvZGV0YWlscz4KCiMjIPCfmY8gQWNrbm93bGVkZ21lbnRzCgotIFR1bm5lbCBwcm90b2NvbCAoRDEgcXVldWUsIHBvbGwvcmVzcG9uZCBmbG93KSBhZGFwdGVkIGZyb20KICBbSGVybXVzZV0oaHR0cHM6Ly9naXRodWIuY29tL2lta29mdHkvSGVybXVzZSkgYnkKICBbaW1rb2Z0eV0oaHR0cHM6Ly9naXRodWIuY29tL2lta29mdHkpLgotIExvY2FsIGJhY2tlbmQgaXMgW0FudGlncmF2aXR5LU1hbmFnZXJdKGh0dHBzOi8vZ2l0aHViLmNvbS9EcmFjdWxhYm8vQW50aWdyYXZpdHlNYW5hZ2VyKQogIGJ5IFtEcmFjdWxhYm9dKGh0dHBzOi8vZ2l0aHViLmNvbS9EcmFjdWxhYm8pLgoKIyMg8J+knSBDb250cmlidXRpbmcKCklzc3VlcyBhbmQgUFJzIGFyZSB3ZWxjb21lLiBQbGVhc2UgZG9uJ3QgY29tbWl0IHNlY3JldHMg4oCUIGAuZ2l0aWdub3JlYAphbHJlYWR5IGV4Y2x1ZGVzIGtleSBmaWxlczsgZG91YmxlLWNoZWNrIHdpdGggYGdpdCBzdGF0dXNgIGJlZm9yZSBwdXNoaW5nLgoKIyMg8J+ThCBMaWNlbnNlCgpbTUlUXShMSUNFTlNFKQoKIyMg4pqg77iPIERpc2NsYWltZXIKCj4gWyFXQVJOSU5HXQo+IFRoaXMgcHJvamVjdCBmb3J3YXJkcyB0byBBbnRpZ3Jhdml0eS1NYW5hZ2VyLCB3aGljaCBhY2Nlc3NlcyBHb29nbGUKPiBzZXJ2aWNlcyB0aHJvdWdoIHVub2ZmaWNpYWwgbWVhbnMuIFRoYXQgbWF5IHZpb2xhdGUgR29vZ2xlJ3MgVGVybXMgb2YKPiBTZXJ2aWNlIGFuZCByaXNrIGFjY291bnQgcmVzdHJpY3Rpb24uIFVzZSBhdCB5b3VyIG93biBkaXNjcmV0aW9uLCB3aXRoCj4gYWNjb3VudHMgeW91IGNhbiBhZmZvcmQgdG8gbG9zZS4gUHJvdmlkZWQgImFzLWlzIiwgbm8gd2FycmFudHkuCgotLS0KCjxwIGFsaWduPSJjZW50ZXIiPgogIElmIHRoaXMgcHJvamVjdCBoZWxwcyB5b3UsIHBsZWFzZSBnaXZlIGl0IGEg4q2QIFN0YXIhCjwvcD4K
+<p align="center">
+  <h1 align="center">antigravity-tunnel</h1>
+</p>
+
+<p align="center">
+  <strong>🚀 Public HTTPS gateway for a local Antigravity-Manager OpenAI API</strong><br>
+  Cloudflare Workers + D1 tunnel — call a model backend with no public inbound, from your phone.
+</p>
+
+<p align="center">
+  <a href="./README.md">English</a> | <a href="./README.zh-CN.md">简体中文</a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/linwis1210/antigravity-tunnel/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/linwis1210/antigravity-tunnel?style=flat-square" alt="License" />
+  </a>
+  <a href="https://github.com/linwis1210/antigravity-tunnel/stargazers">
+    <img src="https://img.shields.io/github/stars/linwis1210/antigravity-tunnel?style=flat-square" alt="Stars" />
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Cloudflare_Workers-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Cloudflare Workers" />
+  <img src="https://img.shields.io/badge/Cloudflare_D1-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Cloudflare D1" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+</p>
+
+---
+
+## 📖 Table of Contents
+
+- [✨ Why antigravity-tunnel?](#-why-antigravity-tunnel)
+- [🎯 Features](#-features)
+- [🏗️ Architecture](#️-architecture)
+- [🚀 Quick Start](#-quick-start)
+- [🛠️ Tech Stack](#️-tech-stack)
+- [❓ FAQ](#-faq)
+- [🙏 Acknowledgments](#-acknowledgments)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
+- [⚠️ Disclaimer](#️-disclaimer)
+
+---
+
+## ✨ Why antigravity-tunnel?
+
+Antigravity-Manager exposes a great OpenAI-compatible API — but only on
+`127.0.0.1`. Your phone, your mainland server, and any remote client can't
+reach it. This project bridges that gap with a hardened Cloudflare tunnel:
+public HTTPS in, local API out, with the real backend key never leaving the
+server.
+
+## 🎯 Features
+
+- 🔐 **Hardened ingress** — key auth (`X-Tunnel-Auth` or `Bearer PUBLIC_KEY`,
+  so standard OpenAI clients just work), path/method/header allowlists
+- 🔑 **Backend key stays server-side** — callers never see the real API key
+- 🚦 **Rate limiting** — 30 req/min per key, 2 MiB body cap
+- 📡 **D1-backed queue** — no persistent connection needed between edge and VM
+- 🐍 **Dependency-light client** — pure-Python, stdlib only, systemd-managed
+
+## 🏗️ Architecture
+
+```
+phone ──HTTPS──> Cloudflare Worker ──D1──> tunnel_d1_client.py ──localhost──> Antigravity :8045
+   (X-Tunnel-Auth or Bearer PUBLIC_KEY)   (polls D1 via API)          (real backend key)
+```
+
+- **Worker** (`worker/worker.js`): public ingress + D1 queue. Validates auth,
+  allowlists, drops caller headers, injects the backend key server-side,
+  enqueues the request, waits ≤25 s for the tunneled response.
+- **Client** (`client/tunnel_d1_client.py`): systemd service on the VM. Polls
+  D1 via the Cloudflare API, forwards queued requests to local Antigravity,
+  writes responses back to D1.
+- **Deploy** (`deploy/deploy_worker.py`, `deploy/schema.sql`): one-shot Worker
+  upload (script + D1 binding + secrets + workers.dev route).
+
+## 🚀 Quick Start
+
+**Prerequisites**: Cloudflare account, D1 database, running Antigravity-Manager
+on `http://127.0.0.1:8045`.
+
+1. Apply `deploy/schema.sql` to your D1 database.
+2. Create a Cloudflare API token (Workers Scripts Edit + D1 Edit).
+3. Copy `.env.example` to `.env` and fill in your account ID, D1 ID and API token
+   (also used by `client/.env` for the tunnel client).
+4. Generate `TUNNEL_KEY` and `PUBLIC_KEY`; note your Antigravity `BACKEND_KEY`.
+5. Save the three secrets to 600-permission files and point
+   `TUNNEL_KEY_FILE` / `PUBLIC_KEY_FILE` / `BACKEND_KEY_FILE` at them,
+   then run `python3 deploy/deploy_worker.py`.
+5. On the VM: `bash client/reinstall-service.sh` (installs the systemd unit;
+   re-run after any VM rebuild).
+6. On your phone (Cherry Studio / OpenCode / any OpenAI client): base URL
+   `https://<worker>.<subdomain>.workers.dev/v1`, API key = `PUBLIC_KEY`.
+
+## 🛠️ Tech Stack
+
+- **Edge**: Cloudflare Workers (ES module), Cloudflare D1 (SQLite)
+- **VM client**: Python 3 (stdlib only — `urllib`, no third-party deps)
+- **Deploy tooling**: Python + Cloudflare REST API (no wrangler required)
+- **Backend**: Antigravity-Manager (OpenAI-compatible `/v1/*`)
+
+## ❓ FAQ
+
+<details>
+<summary><b>Q: Phone gets 404 "No Workers script was found for this host"?</b></summary>
+
+The raw Cloudflare API does **not** enable the `workers.dev` route on upload
+(wrangler does it for you). Fix:
+
+```bash
+curl -X POST "https://api.cloudflare.com/client/v4/accounts/<id>/workers/scripts/<name>/subdomain" \
+  -H "Authorization: Bearer <token>" -H "Content-Type: application/json" \
+  --data '{"enabled":true}'
+```
+
+`deploy/deploy_worker.py` already does this on every deploy.
+</details>
+
+<details>
+<summary><b>Q: Can't reach workers.dev from mainland China?</b></summary>
+
+`*.workers.dev` is SNI-blocked by the GFW. Options: bind a custom domain to
+the Worker (different SNI, usually reachable), or run the backend on an
+overseas VPS instead.
+</details>
+
+<details>
+<summary><b>Q: Services gone after a VM rebuild?</b></summary>
+
+Rebuilds wipe `/etc/systemd/system` but keep `/home`. Re-run:
+`bash ~/muse-antigravity-test/reinstall-service.sh` (Antigravity) and
+`bash ~/experiments/hermuse-antigravity-poc/reinstall-service.sh`
+(tunnel client).
+</details>
+
+<details>
+<summary><b>Q: `stream:true` doesn't stream?</b></summary>
+
+Architectural limit of the long-poll design: the full response is generated
+first, then returned as complete SSE text. No true streaming.
+</details>
+
+## 🙏 Acknowledgments
+
+- Tunnel protocol (D1 queue, poll/respond flow) adapted from
+  [Hermuse](https://github.com/imkofty/Hermuse) by
+  [imkofty](https://github.com/imkofty).
+- Local backend is [Antigravity-Manager](https://github.com/Draculabo/AntigravityManager)
+  by [Draculabo](https://github.com/Draculabo).
+
+## 🤝 Contributing
+
+Issues and PRs are welcome. Please don't commit secrets — `.gitignore`
+already excludes key files; double-check with `git status` before pushing.
+
+## 📄 License
+
+[MIT](LICENSE)
+
+Third-party attributions: [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)
+
+## ⚠️ Disclaimer
+
+> [!WARNING]
+> This project forwards to Antigravity-Manager, which accesses Google
+> services through unofficial means. That may violate Google's Terms of
+> Service and risk account restriction. Use at your own discretion, with
+> accounts you can afford to lose. Provided "as-is", no warranty.
+
+---
+
+<p align="center">
+  If this project helps you, please give it a ⭐ Star!
+</p>

@@ -1,1 +1,125 @@
-IyEvdXNyL2Jpbi9lbnYgcHl0aG9uMwoiIiJEMS1iYWNrZWQgdHVubmVsIGNsaWVudCAoVk0gc2lkZSkuCgpQb2xscyB0aGUgQ2xvdWRmbGFyZSBEMSBxdWV1ZSBESVJFQ1RMWSB2aWEgYXBpLmNsb3VkZmxhcmUuY29tICh2YXVsdC1iYWNrZWQgYXV0aCksCmZvcndhcmRzIHF1ZXVlZCByZXF1ZXN0cyB0byB0aGUgbG9jYWwgQW50aWdyYXZpdHkgQVBJLCBhbmQgd3JpdGVzIHJlc3BvbnNlcyBiYWNrLgoKV2h5IG5vdCB2aWEgdGhlIFdvcmtlcidzIC9fX3R1bm5lbC9wb2xsPyBUaGUgc2FuZGJveCBlZ3Jlc3MgcHJveHkgaXMgaXRzZWxmIGEKQ2xvdWRmbGFyZSBXb3JrZXIsIGFuZCBDbG91ZGZsYXJlIGJsb2NrcyBXb3JrZXIgLT4gKi53b3JrZXJzLmRldiBmZXRjaGVzCihlcnJvciAxMDQyKS4gYXBpLmNsb3VkZmxhcmUuY29tIGlzIE5PVCBhZmZlY3RlZCwgc28gd2UgdGFsayBEMSBkaXJlY3RseS4KCkZsb3cgKHNoYXJlZCBEMSB3aXRoIHRoZSBXb3JrZXIgaW5ncmVzcyk6CiAgV29ya2VyIChwaG9uZSAtPiBEMSk6IElOU0VSVCBJTlRPIHR1bm5lbF9yZXF1ZXN0cyAuLi4gc3RhdHVzPSdwZW5kaW5nJwogIFRoaXMgY2xpZW50OiBTRUxFQ1QgcGVuZGluZyAtPiBVUERBVEUgdG8gJ2NsYWltZWQnIC0+IFBPU1QgdG8gQW50aWdyYXZpdHkKICAgICAgICAgICAgICAgLT4gSU5TRVJUIE9SIFJFUExBQ0UgSU5UTyB0dW5uZWxfcmVzcG9uc2VzCiAgV29ya2VyIChEMSAtPiBwaG9uZSk6IFNFTEVDVCBGUk9NIHR1bm5lbF9yZXNwb25zZXMgV0hFUkUgaWQ9PyAoMjVzIHBvbGwgbG9vcCkKIiIiCmltcG9ydCBiYXNlNjQKaW1wb3J0IGpzb24KaW1wb3J0IG9zCmltcG9ydCBzeXMKaW1wb3J0IHRpbWUKaW1wb3J0IHVybGxpYi5yZXF1ZXN0CmltcG9ydCB1cmxsaWIuZXJyb3IKCnN5cy5wYXRoLmluc2VydCgwLCBvcy5wYXRoLmRpcm5hbWUob3MucGF0aC5hYnNwYXRoKF9fZmlsZV9fKSkpCnN5cy5wYXRoLmluc2VydCgwLCAiL29wdC9oYXRjaC9za2lsbHMvc2tpbGwtY3JlYXRvci9iaW4iKQpmcm9tIGR5bmFtaWNfY3JlZGVudGlhbHMgaW1wb3J0IGFkZF9zdXJyb2dhdGVfdG9fcmVxdWVzdCwgcmVhZF9qc29uX3Jlc3BvbnNlICAjIG5vcWE6IEU0MDIKCkFDQ09VTlQgPSAiYWRhNjY0ZTg5OWY4YTY4MTI3MTA0NDg5ODJmMGFjZDciCkQxX0lEID0gIjlkN2FkNDFmLThkMWMtNGVhNS1iYzAyLWM4YmQ3YjAyNjAwYiIKQVBJID0gImh0dHBzOi8vYXBpLmNsb3VkZmxhcmUuY29tL2NsaWVudC92NCIKTE9DQUwgPSBvcy5lbnZpcm9uLmdldCgiVFVOTkVMX0xPQ0FMIiwgImh0dHA6Ly8xMjcuMC4wLjE6ODA0NSIpClBPTExfSU5URVJWQUwgPSBmbG9hdChvcy5lbnZpcm9uLmdldCgiVFVOTkVMX1BPTExfTVMiLCAiMTAwMCIpKSAvIDEwMDAuMApCQVRDSCA9IDQKCgpkZWYgZDEoc3FsLCBwYXJhbXM9Tm9uZSk6CiAgICAiIiJSdW4gYSBEMSBxdWVyeSB2aWEgdGhlIENsb3VkZmxhcmUgQVBJLiBSZXR1cm5zIGxpc3Qgb2YgcmVzdWx0IHJvd3MuIiIiCiAgICBwYXlsb2FkID0geyJzcWwiOiBzcWx9CiAgICBpZiBwYXJhbXM6CiAgICAgICAgcGF5bG9hZFsicGFyYW1zIl0gPSBwYXJhbXMKICAgIHJlcSA9IHVybGxpYi5yZXF1ZXN0LlJlcXVlc3QoCiAgICAgICAgZiJ7QVBJfS9hY2NvdW50cy97QUNDT1VOVH0vZDEvZGF0YWJhc2Uve0QxX0lEfS9xdWVyeSIsCiAgICAgICAgbWV0aG9kPSJQT1NUIiwgZGF0YT1qc29uLmR1bXBzKHBheWxvYWQpLmVuY29kZSgpLAogICAgICAgIGhlYWRlcnM9eyJDb250ZW50LVR5cGUiOiAiYXBwbGljYXRpb24vanNvbiJ9KQogICAgYWRkX3N1cnJvZ2F0ZV90b19yZXF1ZXN0KHJlcSwgImN1c3RvbS5jbG91ZGZsYXJlIiwgYWxsb3dlZF9ob3N0cz1bImFwaS5jbG91ZGZsYXJlLmNvbSJdKQogICAgd2l0aCB1cmxsaWIucmVxdWVzdC51cmxvcGVuKHJlcSwgdGltZW91dD0zMCkgYXMgcmVzcDoKICAgICAgICBkID0gcmVhZF9qc29uX3Jlc3BvbnNlKHJlc3ApCiAgICBpZiBub3QgZC5nZXQoInN1Y2Nlc3MiKToKICAgICAgICByYWlzZSBSdW50aW1lRXJyb3IoZiJEMSBlcnJvcjoge2pzb24uZHVtcHMoZC5nZXQoJ2Vycm9ycycpKVs6MjAwXX0iKQogICAgb3V0ID0gW10KICAgIGZvciByIGluIGQuZ2V0KCJyZXN1bHQiLCBbXSk6CiAgICAgICAgb3V0LmV4dGVuZChyLmdldCgicmVzdWx0cyIsIFtdKSkKICAgIHJldHVybiBvdXQKCgpkZWYgZm9yd2FyZF90b19iYWNrZW5kKG1ldGhvZCwgcGF0aCwgaGVhZGVycywgYm9keV9iNjQpOgogICAgIiIiRm9yd2FyZCBvbmUgcmVxdWVzdCB0byBsb2NhbCBBbnRpZ3Jhdml0eS4gUmV0dXJucyAoc3RhdHVzLCBoZWFkZXJzX2RpY3QsIGJvZHlfYjY0KS4iIiIKICAgIGRhdGEgPSBiYXNlNjQuYjY0ZGVjb2RlKGJvZHlfYjY0KSBpZiBib2R5X2I2NCBlbHNlIE5vbmUKICAgIHJlcSA9IHVybGxpYi5yZXF1ZXN0LlJlcXVlc3QoTE9DQUwgKyBwYXRoLCBtZXRob2Q9bWV0aG9kLCBkYXRhPWRhdGEsIGhlYWRlcnM9aGVhZGVycykKICAgIHRyeToKICAgICAgICB3aXRoIHVybGxpYi5yZXF1ZXN0LnVybG9wZW4ocmVxLCB0aW1lb3V0PTEyMCkgYXMgcmVzcDoKICAgICAgICAgICAgcmF3ID0gcmVzcC5yZWFkKCkKICAgICAgICAgICAgcmggPSB7ay5sb3dlcigpOiB2IGZvciBrLCB2IGluIHJlc3AuaGVhZGVycy5pdGVtcygpfQogICAgZXhjZXB0IHVybGxpYi5lcnJvci5IVFRQRXJyb3IgYXMgZToKICAgICAgICByYXcgPSBlLnJlYWQoKQogICAgICAgIHJoID0ge2subG93ZXIoKTogdiBmb3IgaywgdiBpbiAoZS5oZWFkZXJzLml0ZW1zKCkgaWYgZS5oZWFkZXJzIGVsc2UgW10pfQogICAgICAgIHJldHVybiBlLmNvZGUsIHJoLCBiYXNlNjQuYjY0ZW5jb2RlKHJhdykuZGVjb2RlKCkgaWYgcmF3IGVsc2UgTm9uZQogICAgIyBTdHJpcCBob3AtYnktaG9wIC8gcHJvYmxlbWF0aWMgaGVhZGVycyBiZWZvcmUgc3RvcmluZwogICAgZm9yIGggaW4gKCJjb250ZW50LWVuY29kaW5nIiwgInRyYW5zZmVyLWVuY29kaW5nIiwgImNvbm5lY3Rpb24iKToKICAgICAgICByaC5wb3AoaCwgTm9uZSkKICAgIHJldHVybiByZXNwLnN0YXR1cywgcmgsIGJhc2U2NC5iNjRlbmNvZGUocmF3KS5kZWNvZGUoKSBpZiByYXcgZWxzZSBOb25lCgoKZGVmIGNsZWFudXAobm93KToKICAgIGQxKCJERUxFVEUgRlJPTSB0dW5uZWxfcmVxdWVzdHMgV0hFUkUgY3JlYXRlZF9hdCA8ID8iLAogICAgICAgW25vdyAtIDEyMDAwMF0pCiAgICBkMSgiREVMRVRFIEZST00gdHVubmVsX3Jlc3BvbnNlcyBXSEVSRSBjcmVhdGVkX2F0IDwgPyIsCiAgICAgICBbbm93IC0gMTIwMDAwXSkKCgpkZWYgbWFpbigpOgogICAgcHJpbnQoZiJ0dW5uZWwtZDEtY2xpZW50OiBwb2xsaW5nIEQxLCBiYWNrZW5kPXtMT0NBTH0iLCBmbHVzaD1UcnVlKQogICAgd2hpbGUgVHJ1ZToKICAgICAgICB0cnk6CiAgICAgICAgICAgIG5vdyA9IGludCh0aW1lLnRpbWUoKSAqIDEwMDApCiAgICAgICAgICAgIGNsZWFudXAobm93KQogICAgICAgICAgICByb3dzID0gZDEoCiAgICAgICAgICAgICAgICAiU0VMRUNUIGlkLCBtZXRob2QsIHBhdGgsIGhlYWRlcnMsIGJvZHkgRlJPTSB0dW5uZWxfcmVxdWVzdHMgIgogICAgICAgICAgICAgICAgIldIRVJFIHN0YXR1cz0ncGVuZGluZycgT1JERVIgQlkgY3JlYXRlZF9hdCBBU0MgTElNSVQgPyIsCiAgICAgICAgICAgICAgICBbQkFUQ0hdKQogICAgICAgICAgICBpZiByb3dzOgogICAgICAgICAgICAgICAgaWRzID0gW3JbImlkIl0gZm9yIHIgaW4gcm93c10KICAgICAgICAgICAgICAgIHBoID0gIiwiLmpvaW4oIj8iIGZvciBfIGluIGlkcykKICAgICAgICAgICAgICAgIGQxKGYiVVBEQVRFIHR1bm5lbF9yZXF1ZXN0cyBTRVQgc3RhdHVzPSdjbGFpbWVkJyAiCiAgICAgICAgICAgICAgICAgICBmIldIRVJFIGlkIElOICh7cGh9KSBBTkQgc3RhdHVzPSdwZW5kaW5nJyIsIGlkcykKICAgICAgICAgICAgICAgIGZvciByIGluIHJvd3M6CiAgICAgICAgICAgICAgICAgICAgcmlkLCBtZXRob2QsIHBhdGggPSByWyJpZCJdLCByWyJtZXRob2QiXSwgclsicGF0aCJdCiAgICAgICAgICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAgICAgICAgICBoZWFkZXJzID0ganNvbi5sb2FkcyhyWyJoZWFkZXJzIl0gb3IgInt9IikKICAgICAgICAgICAgICAgICAgICAgICAgc2MsIHJoLCByYiA9IGZvcndhcmRfdG9fYmFja2VuZChtZXRob2QsIHBhdGgsIGhlYWRlcnMsIHJbImJvZHkiXSkKICAgICAgICAgICAgICAgICAgICAgICAgZDEoIklOU0VSVCBPUiBSRVBMQUNFIElOVE8gdHVubmVsX3Jlc3BvbnNlcyAiCiAgICAgICAgICAgICAgICAgICAgICAgICAgICIoaWQsIHN0YXR1c19jb2RlLCBoZWFkZXJzLCBib2R5LCBjcmVhdGVkX2F0KSBWQUxVRVMgKD8sPyw/LD8sPykiLAogICAgICAgICAgICAgICAgICAgICAgICAgICBbcmlkLCBzYywganNvbi5kdW1wcyhyaCksIHJiLCBpbnQodGltZS50aW1lKCkgKiAxMDAwKV0pCiAgICAgICAgICAgICAgICAgICAgICAgIHByaW50KGYie21ldGhvZH0ge3BhdGh9IC0+IHtzY30iLCBmbHVzaD1UcnVlKQogICAgICAgICAgICAgICAgICAgIGV4Y2VwdCBFeGNlcHRpb24gYXMgZToKICAgICAgICAgICAgICAgICAgICAgICAgcHJpbnQoZiJmb3J3YXJkIHtyaWR9IGZhaWxlZDoge2V9IiwgZmx1c2g9VHJ1ZSkKICAgICAgICAgICAgICAgICAgICAgICAgZDEoIklOU0VSVCBPUiBSRVBMQUNFIElOVE8gdHVubmVsX3Jlc3BvbnNlcyAiCiAgICAgICAgICAgICAgICAgICAgICAgICAgICIoaWQsIHN0YXR1c19jb2RlLCBoZWFkZXJzLCBib2R5LCBjcmVhdGVkX2F0KSBWQUxVRVMgKD8sPyw/LD8sPykiLAogICAgICAgICAgICAgICAgICAgICAgICAgICBbcmlkLCA1MDIsICJ7fSIsIE5vbmUsIGludCh0aW1lLnRpbWUoKSAqIDEwMDApXSkKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIHRpbWUuc2xlZXAoUE9MTF9JTlRFUlZBTCkKICAgICAgICBleGNlcHQgRXhjZXB0aW9uIGFzIGU6CiAgICAgICAgICAgIHByaW50KGYicG9sbCBsb29wIGVycm9yOiB7ZX0iLCBmbHVzaD1UcnVlKQogICAgICAgICAgICB0aW1lLnNsZWVwKDUpCgoKaWYgX19uYW1lX18gPT0gIl9fbWFpbl9fIjoKICAgIG1haW4oKQo=
+#!/usr/bin/env python3
+"""D1-backed tunnel client (VM side).
+
+Polls the Cloudflare D1 queue DIRECTLY via api.cloudflare.com, forwards queued
+requests to the local Antigravity API, and writes responses back.
+
+Config: set CF_ACCOUNT_ID, CF_D1_ID, CF_API_TOKEN as env vars, or copy
+.env.example to client/.env and fill it in. Optional: TUNNEL_LOCAL
+(default http://127.0.0.1:8045), TUNNEL_POLL_MS (default 1000).
+
+Why not via the Worker's /__tunnel/poll? The sandbox egress proxy is itself a
+Cloudflare Worker, and Cloudflare blocks Worker -> *.workers.dev fetches
+(error 1042). api.cloudflare.com is NOT affected, so we talk D1 directly.
+
+Flow (shared D1 with the Worker ingress):
+  Worker (phone -> D1): INSERT INTO tunnel_requests ... status='pending'
+  This client: SELECT pending -> UPDATE to 'claimed' -> POST to Antigravity
+               -> INSERT OR REPLACE INTO tunnel_responses
+  Worker (D1 -> phone): SELECT FROM tunnel_responses WHERE id=? (25s poll loop)
+"""
+import base64
+import json
+import os
+import sys
+import time
+import urllib.request
+import urllib.error
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from cf_auth import auth_request, load_dotenv, read_json_response, require_config  # noqa: E402
+
+load_dotenv()  # optional: reads client/.env
+require_config("CF_ACCOUNT_ID", "CF_D1_ID")
+
+ACCOUNT = os.environ["CF_ACCOUNT_ID"]
+D1_ID = os.environ["CF_D1_ID"]
+API = "https://api.cloudflare.com/client/v4"
+LOCAL = os.environ.get("TUNNEL_LOCAL", "http://127.0.0.1:8045")
+POLL_INTERVAL = float(os.environ.get("TUNNEL_POLL_MS", "1000")) / 1000.0
+BATCH = 4
+
+
+def d1(sql, params=None):
+    """Run a D1 query via the Cloudflare API. Returns list of result rows."""
+    payload = {"sql": sql}
+    if params:
+        payload["params"] = params
+    req = urllib.request.Request(
+        f"{API}/accounts/{ACCOUNT}/d1/database/{D1_ID}/query",
+        method="POST", data=json.dumps(payload).encode(),
+        headers={"Content-Type": "application/json"})
+    auth_request(req)
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        d = read_json_response(resp)
+    if not d.get("success"):
+        raise RuntimeError(f"D1 error: {json.dumps(d.get('errors'))[:200]}")
+    out = []
+    for r in d.get("result", []):
+        out.extend(r.get("results", []))
+    return out
+
+
+def forward_to_backend(method, path, headers, body_b64):
+    """Forward one request to local Antigravity. Returns (status, headers_dict, body_b64)."""
+    data = base64.b64decode(body_b64) if body_b64 else None
+    req = urllib.request.Request(LOCAL + path, method=method, data=data, headers=headers)
+    try:
+        with urllib.request.urlopen(req, timeout=120) as resp:
+            raw = resp.read()
+            rh = {k.lower(): v for k, v in resp.headers.items()}
+    except urllib.error.HTTPError as e:
+        raw = e.read()
+        rh = {k.lower(): v for k, v in (e.headers.items() if e.headers else [])}
+        return e.code, rh, base64.b64encode(raw).decode() if raw else None
+    # Strip hop-by-hop / problematic headers before storing
+    for h in ("content-encoding", "transfer-encoding", "connection"):
+        rh.pop(h, None)
+    return resp.status, rh, base64.b64encode(raw).decode() if raw else None
+
+
+def cleanup(now):
+    d1("DELETE FROM tunnel_requests WHERE created_at < ?",
+       [now - 120000])
+    d1("DELETE FROM tunnel_responses WHERE created_at < ?",
+       [now - 120000])
+
+
+def main():
+    print(f"tunnel-d1-client: polling D1, backend={LOCAL}", flush=True)
+    while True:
+        try:
+            now = int(time.time() * 1000)
+            cleanup(now)
+            rows = d1(
+                "SELECT id, method, path, headers, body FROM tunnel_requests "
+                "WHERE status='pending' ORDER BY created_at ASC LIMIT ?",
+                [BATCH])
+            if rows:
+                ids = [r["id"] for r in rows]
+                ph = ",".join("?" for _ in ids)
+                d1(f"UPDATE tunnel_requests SET status='claimed' "
+                   f"WHERE id IN ({ph}) AND status='pending'", ids)
+                for r in rows:
+                    rid, method, path = r["id"], r["method"], r["path"]
+                    try:
+                        headers = json.loads(r["headers"] or "{}")
+                        sc, rh, rb = forward_to_backend(method, path, headers, r["body"])
+                        d1("INSERT OR REPLACE INTO tunnel_responses "
+                           "(id, status_code, headers, body, created_at) VALUES (?,?,?,?,?)",
+                           [rid, sc, json.dumps(rh), rb, int(time.time() * 1000)])
+                        print(f"{method} {path} -> {sc}", flush=True)
+                    except Exception as e:
+                        print(f"forward {rid} failed: {e}", flush=True)
+                        d1("INSERT OR REPLACE INTO tunnel_responses "
+                           "(id, status_code, headers, body, created_at) VALUES (?,?,?,?,?)",
+                           [rid, 502, "{}", None, int(time.time() * 1000)])
+            else:
+                time.sleep(POLL_INTERVAL)
+        except Exception as e:
+            print(f"poll loop error: {e}", flush=True)
+            time.sleep(5)
+
+
+if __name__ == "__main__":
+    main()
