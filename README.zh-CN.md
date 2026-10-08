@@ -32,6 +32,7 @@
 
 - [✨ 为什么做这个？](#-为什么做这个)
 - [🎯 特性](#-特性)
+- [🔌 不只反代 Antigravity](#-不只反代-antigravity)
 - [🏗️ 架构](#️-架构)
 - [🚀 快速开始](#-快速开始)
 - [🛠️ 技术栈](#️-技术栈)
@@ -59,6 +60,24 @@ Cloudflare 隧道补上这一环：公网 HTTPS 进，本地 API 出，真实后
 - 🚦 **限流** —— 每 Key 30 次/分钟，请求体上限 2 MiB
 - 📡 **D1 队列** —— 边缘与 VM 之间无需长连接
 - 🐍 **轻量客户端** —— 纯 Python，只用标准库，systemd 托管
+
+## 🔌 不只反代 Antigravity——换成你自己的后端
+
+这条隧道是后端无关的：它是个通用的 HTTP-over-D1 反代，Antigravity-Manager
+只是默认后端。指哪打哪：
+
+```bash
+# client/.env（或环境变量）
+TUNNEL_LOCAL=http://127.0.0.1:11434/v1   # 比如 Ollama
+```
+
+| 后端类型 | 需要改什么 |
+|---|---|
+| OpenAI 兼容接口（Ollama、vLLM、llama.cpp、LiteLLM…） | 什么都不用改，设 `TUNNEL_LOCAL` 就行，真流式照样走 |
+| 鉴权方式不同（key 放 query、自定义 header…） | 小改 `worker.js` 里服务端注入后端 Key 的那几行 |
+| 非 OpenAI 路径（Anthropic `/v1/messages`、Gemini 原生…） | 往 `worker.js` 的 `PATH_ALLOWLIST` 加一行 |
+
+边界说清楚：隧道只负责"把本地服务发布出去"，不负责"把订阅变成 API"。后者（比如 Google 账号 → OpenAI 接口）是后端网关的事。如果你本地有个网关能把 ChatGPT / Grok / Claude 订阅转成 HTTP 接口，这条隧道就能把它发布出去。接过别的后端？欢迎 PR / 提 issue 分享！
 
 ## 🏗️ 架构
 
@@ -101,7 +120,8 @@ Cloudflare 隧道补上这一环：公网 HTTPS 进，本地 API 出，真实后
 - **边缘**：Cloudflare Workers（ES Module）、Cloudflare D1（SQLite）
 - **VM 客户端**：Python 3（仅标准库 `urllib`，无第三方依赖）
 - **部署工具**：Python + Cloudflare REST API（不需要 wrangler）
-- **后端**：Antigravity-Manager（OpenAI 兼容 `/v1/*`）
+- **后端**：任意本地 HTTP API——Antigravity-Manager 是默认后端
+  （见[🔌 不只反代 Antigravity](#-不只反代-antigravity)）
 
 ## ❓ 常见问题
 

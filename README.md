@@ -32,6 +32,7 @@
 
 - [✨ Why antigravity-tunnel?](#-why-antigravity-tunnel)
 - [🎯 Features](#-features)
+- [🔌 Not just Antigravity](#-not-just-antigravity)
 - [🏗️ Architecture](#️-architecture)
 - [🚀 Quick Start](#-quick-start)
 - [🛠️ Tech Stack](#️-tech-stack)
@@ -59,6 +60,28 @@ server.
 - 🚦 **Rate limiting** — 30 req/min per key, 2 MiB body cap
 - 📡 **D1-backed queue** — no persistent connection needed between edge and VM
 - 🐍 **Dependency-light client** — pure-Python, stdlib only, systemd-managed
+
+## 🔌 Not just Antigravity — bring your own backend
+
+The tunnel is backend-agnostic: it's a generic HTTP-over-D1 reverse proxy,
+and Antigravity-Manager is only the default backend. Point it at anything:
+
+```bash
+# client/.env (or environment variable)
+TUNNEL_LOCAL=http://127.0.0.1:11434/v1   # e.g. Ollama
+```
+
+| Backend | What to change |
+|---|---|
+| Any OpenAI-compatible API (Ollama, vLLM, llama.cpp, LiteLLM…) | Nothing — just set `TUNNEL_LOCAL`. True streaming works too. |
+| Different auth scheme (key in query param, custom header…) | Small edit where `worker.js` injects the backend key server-side |
+| Non-OpenAI paths (Anthropic `/v1/messages`, Gemini native, …) | Add the path to `PATH_ALLOWLIST` in `worker.js` |
+
+One boundary to keep in mind: the tunnel *publishes* a local HTTP service,
+it doesn't *convert* a subscription into an API. That conversion (e.g. a
+Google account → OpenAI API) is the backend's job. If you have a local
+gateway for your ChatGPT / Grok / Claude subscription, this tunnel can
+publish it. Wired it up to something else? PRs and issues welcome!
 
 ## 🏗️ Architecture
 
@@ -103,7 +126,8 @@ on `http://127.0.0.1:8045`.
 - **Edge**: Cloudflare Workers (ES module), Cloudflare D1 (SQLite)
 - **VM client**: Python 3 (stdlib only — `urllib`, no third-party deps)
 - **Deploy tooling**: Python + Cloudflare REST API (no wrangler required)
-- **Backend**: Antigravity-Manager (OpenAI-compatible `/v1/*`)
+- **Backend**: any local HTTP API — Antigravity-Manager is the default
+  (see [🔌 Not just Antigravity](#-not-just-antigravity))
 
 ## ❓ FAQ
 
