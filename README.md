@@ -146,6 +146,14 @@ Architectural limit of the long-poll design: the full response is generated
 first, then returned as complete SSE text. No true streaming.
 </details>
 
+<details>
+<summary><b>Q: Tunnel client logs HTTP 403 on every D1 poll?</b></summary>
+
+Your egress proxy credentials likely rotated (common after a VM reboot on
+cloud runtimes). Don't bake a captured proxy config into the service file —
+see [docs/OPERATIONS.md](docs/OPERATIONS.md) for the full story and fix.
+</details>
+
 ## 🙏 Acknowledgments
 
 - Tunnel protocol (D1 queue, poll/respond flow) adapted from

@@ -142,6 +142,13 @@ curl -X POST "https://api.cloudflare.com/client/v4/accounts/<id>/workers/scripts
 长轮询架构限制：先完整生成，再一次性返回 SSE 文本，无真流式。
 </details>
 
+<details>
+<summary><b>Q: 隧道客户端每次轮询 D1 都报 403？</b></summary>
+
+出口代理凭证可能已轮换（云环境重启后常见）。不要把抓拍的代理配置写进
+服务文件——完整排查和修复见 [docs/OPERATIONS.md](docs/OPERATIONS.md)。
+</details>
+
 ## 🙏 致谢
 
 - 隧道协议（D1 队列、poll/respond 流程）借鉴自
