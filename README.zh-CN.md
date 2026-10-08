@@ -90,7 +90,7 @@ Cloudflare 隧道补上这一环：公网 HTTPS 进，本地 API 出，真实后
   `python3 deploy/deploy_worker.py`。
 5. VM 上执行 `bash client/reinstall-service.sh` 安装 systemd 服务
   （VM 重建后重跑一次即可）。
-6. 手机上（Cherry Studio / OpenCode / 任意 OpenAI 客户端）：Base URL
+6. 手机上（Cherry Studio / OpenCode / Muse / 任意 OpenAI 客户端）：Base URL
    `https://<worker>.<subdomain>.workers.dev/v1`，API Key = `PUBLIC_KEY`。
 
 ## 🛠️ 技术栈

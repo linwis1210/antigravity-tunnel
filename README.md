@@ -91,7 +91,7 @@ on `http://127.0.0.1:8045`.
    then run `python3 deploy/deploy_worker.py`.
 5. On the VM: `bash client/reinstall-service.sh` (installs the systemd unit;
    re-run after any VM rebuild).
-6. On your phone (Cherry Studio / OpenCode / any OpenAI client): base URL
+6. On your phone (Cherry Studio / OpenCode / Muse / any OpenAI client): base URL
    `https://<worker>.<subdomain>.workers.dev/v1`, API key = `PUBLIC_KEY`.
 
 ## 🛠️ Tech Stack
