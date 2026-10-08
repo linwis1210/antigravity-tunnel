@@ -74,6 +74,9 @@ Cloudflare 隧道补上这一环：公网 HTTPS 进，本地 API 出，真实后
   写回 D1。
 - **部署**（`deploy/deploy_worker.py`、`deploy/schema.sql`）：一键上传
   Worker（含 D1 绑定、secrets、workers.dev 路由）。
+- **运行位置**：为 [Muse](https://muse.ai) 云 Linux 环境设计——
+  Antigravity-Manager 与 `tunnel_d1_client.py` 以 systemd 服务跑在上面，
+  Worker 对外暴露反代 API（`/v1/*`），供你的其他 agent 调用。
 
 ## 🚀 快速开始
 
@@ -90,7 +93,7 @@ Cloudflare 隧道补上这一环：公网 HTTPS 进，本地 API 出，真实后
   `python3 deploy/deploy_worker.py`。
 5. VM 上执行 `bash client/reinstall-service.sh` 安装 systemd 服务
   （VM 重建后重跑一次即可）。
-6. 手机上（Cherry Studio / OpenCode / Muse / 任意 OpenAI 客户端）：Base URL
+6. 手机上（Cherry Studio / OpenCode / 任意 OpenAI 客户端）：Base URL
    `https://<worker>.<subdomain>.workers.dev/v1`，API Key = `PUBLIC_KEY`。
 
 ## 🛠️ 技术栈
