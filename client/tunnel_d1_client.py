@@ -17,11 +17,16 @@ Flow (shared D1 with the Worker ingress):
   This client: SELECT pending -> UPDATE to 'claimed' -> POST to Antigravity
                -> INSERT OR REPLACE INTO tunnel_responses
   Worker (D1 -> phone): SELECT FROM tunnel_responses WHERE id=? (25s poll loop)
+
+Streaming ("stream": true chat requests): the client reads the backend SSE
+incrementally and INSERTs batches into tunnel_chunks; the Worker replays
+them as SSE to the caller (true incremental delivery, no 25s cap).
 """
 import base64
 import json
 import os
 import sys
+import threading
 import time
 import urllib.request
 import urllib.error
@@ -78,10 +83,82 @@ def forward_to_backend(method, path, headers, body_b64):
     return resp.status, rh, base64.b64encode(raw).decode() if raw else None
 
 
+
+def parse_body_json(body_b64):
+    """Best-effort decode of a base64 request body to dict ({} on failure)."""
+    try:
+        return json.loads(base64.b64decode(body_b64).decode("utf-8")) if body_b64 else {}
+    except Exception:
+        return {}
+
+
+def forward_streaming(rid, method, path, headers, body_b64):
+    """Forward a stream:true chat request, writing SSE chunks to D1 incrementally.
+
+    Reads the backend SSE response event-by-event and INSERTs batches into
+    tunnel_chunks. A control row {"__ctrl__":"done"} (or "error") ends the
+    stream; the Worker replays rows as SSE to the caller.
+    """
+    data = base64.b64decode(body_b64) if body_b64 else None
+    req = urllib.request.Request(LOCAL + path, method=method, data=data, headers=headers)
+    seq = 0
+
+    def emit(raw: bytes):
+        nonlocal seq
+        d1("INSERT INTO tunnel_chunks (req_id, seq, data, created_at) VALUES (?,?,?,?)",
+           [rid, seq, base64.b64encode(raw).decode(), int(time.time() * 1000)])
+        seq += 1
+
+    def emit_ctrl(kind, **kw):
+        emit(json.dumps({"__ctrl__": kind, **kw}).encode())
+
+    try:
+        with urllib.request.urlopen(req, timeout=300) as resp:
+            buf, pending, last_flush = b"", [], time.time()
+            finished = False
+            while True:
+                try:
+                    piece = resp.read(8192)
+                except Exception:
+                    break
+                if not piece:
+                    break
+                buf += piece
+                while b"\n\n" in buf:
+                    ev, buf = buf.split(b"\n\n", 1)
+                    ev = ev.strip()
+                    if not ev:
+                        continue
+                    pending.append(ev + b"\n\n")
+                    if ev == b"data: [DONE]":
+                        finished = True
+                        break
+                if finished:
+                    break
+                if pending and (time.time() - last_flush > 0.4
+                                or sum(map(len, pending)) > 8192):
+                    emit(b"".join(pending))
+                    pending, last_flush = [], time.time()
+            if pending:
+                emit(b"".join(pending))
+            emit_ctrl("done")
+    except urllib.error.HTTPError as e:
+        try:
+            detail = e.read().decode("utf-8", "replace")[:200]
+        except Exception:
+            detail = ""
+        emit_ctrl("error", status=e.code, message=detail)
+    except Exception as e:
+        emit_ctrl("error", message=str(e)[:200])
+    print(f"stream {rid} finished, {seq} chunks", flush=True)
+
+
 def cleanup(now):
     d1("DELETE FROM tunnel_requests WHERE created_at < ?",
        [now - 120000])
     d1("DELETE FROM tunnel_responses WHERE created_at < ?",
+       [now - 120000])
+    d1("DELETE FROM tunnel_chunks WHERE created_at < ?",
        [now - 120000])
 
 
@@ -104,6 +181,17 @@ def main():
                     rid, method, path = r["id"], r["method"], r["path"]
                     try:
                         headers = json.loads(r["headers"] or "{}")
+                        bj = parse_body_json(r["body"])
+                        if (method == "POST" and path == "/v1/chat/completions"
+                                and bj.get("stream") is True):
+                            # Streaming: run in background so a long stream
+                            # doesn't starve other queued requests.
+                            threading.Thread(
+                                target=forward_streaming,
+                                args=(rid, method, path, headers, r["body"]),
+                                daemon=True).start()
+                            print(f"stream {rid} started in background", flush=True)
+                            continue
                         sc, rh, rb = forward_to_backend(method, path, headers, r["body"])
                         d1("INSERT OR REPLACE INTO tunnel_responses "
                            "(id, status_code, headers, body, created_at) VALUES (?,?,?,?,?)",

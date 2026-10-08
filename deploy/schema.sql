@@ -19,3 +19,15 @@ CREATE TABLE IF NOT EXISTS tunnel_responses (
   body        TEXT,
   created_at  INTEGER
 );
+
+-- Streaming chunks: written incrementally by tunnel_d1_client.py for
+-- requests with "stream": true, consumed by the Worker which replays them
+-- as SSE. A control row {"__ctrl__":"done"} (or "error") ends the stream.
+CREATE TABLE IF NOT EXISTS tunnel_chunks (
+  req_id     TEXT NOT NULL,
+  seq        INTEGER NOT NULL,
+  data       TEXT NOT NULL,
+  created_at INTEGER NOT NULL,
+  PRIMARY KEY (req_id, seq)
+);
+CREATE INDEX IF NOT EXISTS idx_chunks_req ON tunnel_chunks(req_id, seq);

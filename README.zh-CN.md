@@ -139,7 +139,9 @@ curl -X POST "https://api.cloudflare.com/client/v4/accounts/<id>/workers/scripts
 <details>
 <summary><b>Q: `stream:true` 不流式？</b></summary>
 
-长轮询架构限制：先完整生成，再一次性返回 SSE 文本，无真流式。
+现在支持了（2026-10-08 起）：分块真流式——VM 客户端把 SSE 事件逐批写入
+D1 的 `tunnel_chunks` 表，Worker 再以 SSE 推给调用方。首字约 1~2 秒，
+无 25 秒上限。`stream:false` 仍走缓冲老路。
 </details>
 
 <details>

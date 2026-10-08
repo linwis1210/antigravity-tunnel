@@ -142,8 +142,10 @@ Rebuilds wipe `/etc/systemd/system` but keep `/home`. Re-run:
 <details>
 <summary><b>Q: `stream:true` doesn't stream?</b></summary>
 
-Architectural limit of the long-poll design: the full response is generated
-first, then returned as complete SSE text. No true streaming.
+It does now (since 2026-10-08): chunked true streaming — the VM client writes
+SSE events to the `tunnel_chunks` D1 table incrementally and the Worker
+replays them to the caller as SSE. First token in ~1-2s, no 25s cap.
+`stream:false` still uses the buffered path.
 </details>
 
 <details>

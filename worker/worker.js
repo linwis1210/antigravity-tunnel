@@ -116,8 +116,9 @@ async function handleIngress(request, env) {
 
   // 5. body cap
   let bodyB64 = null;
+  let buf = null;
   if (request.body && request.method !== "GET" && request.method !== "HEAD") {
-    const buf = await request.arrayBuffer();
+    buf = await request.arrayBuffer();
     if (buf.byteLength > MAX_BODY) {
       return new Response(JSON.stringify({ error: "body too large" }), { status: 413 });
     }
@@ -135,6 +136,16 @@ async function handleIngress(request, env) {
   await env.DB.prepare(
     "INSERT INTO tunnel_requests (id, method, path, headers, body, status, created_at) VALUES (?,?,?,?,?,'pending',?)"
   ).bind(id, request.method, url.pathname + url.search, JSON.stringify(headers), bodyB64, now).run();
+
+  // 5b. streaming requests: replay D1 chunks as SSE instead of waiting
+  // for the full response (true incremental delivery, no 25s cap).
+  if (request.method === "POST" && url.pathname === "/v1/chat/completions" && buf && buf.byteLength > 0) {
+    try {
+      if (JSON.parse(new TextDecoder().decode(buf)).stream === true) {
+        return streamChunks(id, request.signal, env);
+      }
+    } catch {}
+  }
 
   // 6. wait for tunneled response
   const deadline = Date.now() + WAIT_MS;
@@ -162,4 +173,79 @@ async function handleIngress(request, env) {
 
   await env.DB.prepare("DELETE FROM tunnel_requests WHERE id=?").bind(id).run();
   return new Response(JSON.stringify({ error: "tunnel timeout" }), { status: 504 });
+}
+
+// Streaming ingress: replay tunnel_chunks rows as SSE until the done marker.
+// The VM client writes chunks incrementally; we long-poll D1 and push each
+// batch to the caller as it arrives (true streaming, no 25s cap).
+async function streamChunks(id, signal, env) {
+  const { readable, writable } = new TransformStream();
+  const writer = writable.getWriter();
+  const enc = new TextEncoder();
+  const write = (s) => writer.write(enc.encode(s));
+
+  (async () => {
+    let seq = 0;
+    const deadline = Date.now() + 6 * 60 * 1000; // absolute cap
+    let idleSince = Date.now();
+    try {
+      for (;;) {
+        if (signal.aborted) break;
+        const rows = await env.DB.prepare(
+          "SELECT seq, data FROM tunnel_chunks WHERE req_id=? AND seq>=? ORDER BY seq ASC LIMIT 50"
+        ).bind(id, seq).all();
+        for (const r of rows.results || []) {
+          // base64 -> bytes -> proper UTF-8 string.
+          // NOTE: atob() returns a "binary string" (one char per byte); it must
+          // NOT be passed through TextEncoder directly, or non-ASCII text gets
+          // double-encoded into mojibake (learned the hard way, 2026-10-08).
+          const bin = atob(r.data);
+          const bytes = new Uint8Array(bin.length);
+          for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+          const raw = new TextDecoder().decode(bytes);
+          let ctrl = null;
+          try {
+            const j = JSON.parse(raw);
+            if (j && typeof j.__ctrl__ === "string") ctrl = j;
+          } catch {}
+          if (ctrl && ctrl.__ctrl__ === "done") {
+            await write("data: [DONE]\n\n");
+            await cleanupStream(id, env);
+            await writer.close();
+            return;
+          }
+          if (ctrl && ctrl.__ctrl__ === "error") {
+            await write(`data: ${JSON.stringify({ error: ctrl.message || "stream error" })}\n\n`);
+            await write("data: [DONE]\n\n");
+            await cleanupStream(id, env);
+            await writer.close();
+            return;
+          }
+          await write(raw);
+          seq = r.seq + 1;
+          idleSince = Date.now();
+        }
+        if (Date.now() - idleSince > 30000 || Date.now() > deadline) break;
+        await new Promise((r) => setTimeout(r, 350));
+      }
+    } catch {}
+    try { await cleanupStream(id, env); } catch {}
+    try { await writer.close(); } catch {}
+  })();
+
+  return new Response(readable, {
+    headers: {
+      "content-type": "text/event-stream; charset=utf-8",
+      "cache-control": "no-cache",
+      "connection": "keep-alive",
+      "x-accel-buffering": "no",
+    },
+  });
+}
+
+async function cleanupStream(id, env) {
+  await env.DB.batch([
+    env.DB.prepare("DELETE FROM tunnel_requests WHERE id=?").bind(id),
+    env.DB.prepare("DELETE FROM tunnel_chunks WHERE req_id=?").bind(id),
+  ]);
 }

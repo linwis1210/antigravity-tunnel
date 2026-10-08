@@ -73,3 +73,35 @@ the real Worker injects the backend key server-side).
 - `*.workers.dev` is SNI-blocked in mainland China — bind a custom domain
   for mainland callers (see README FAQ). 大陆直连 workers.dev 被墙，
   给大陆调用方绑自定义域名。
+
+
+## 6. Worker pitfalls (2026-10-08 blood lessons)
+## 6. Worker 踩坑记录（2026-10-08 血泪版）
+
+### 6a. `buf` 作用域 bug → 所有 POST 返回 500 / error 1101
+
+`const buf` 声明在 body 上限的 `if` 代码块**里面**，却在外面被引用 →
+`ReferenceError` → Worker 抛异常 → Cloudflare 返回 500（error 1101）。
+极具迷惑性：`GET /v1/models` 因 `method==="POST"` 短路求值没碰到 `buf`，
+照常 200，看起来像"网关活着、后端死了"，实际是网关自己炸了。
+
+教训：`node --check` 只查语法，不查作用域。部署前必须用 node + mock D1
+把三种请求（stream:true / stream:false / GET）实际跑一遍。
+
+### 6b. `atob()` → TextEncoder 二次编码 → 中文乱码
+
+`atob()` 返回的是 "binary string"（一个字符 = 一个字节，码点 0~255）。
+把它直接丢给 `TextEncoder().encode()`，会把每个字节当成 Unicode 码点
+重新按 UTF-8 编码 → 非 ASCII 文本被编两次 → "模型" 变成 "æ¨¡å"。
+ASCII 不受影响 → 纯英文单测全过，完美隐藏 bug。
+
+修复：`base64 → Uint8Array → new TextDecoder().decode()` 得到真正的字符串；
+写回流时要么写原始 bytes，要么对解码后的正确字符串再编码。
+
+教训：单测**必须**包含中文（非 ASCII）内容，纯英文测试对编码 bug
+是瞎子。
+
+### 6c. SSE 的 Content-Type 声明 charset
+
+`text/event-stream; charset=utf-8`。有些 HTTP 客户端在没有 charset 声明时
+会按 Latin-1 默认解码。不声明就是给自己埋雷。
